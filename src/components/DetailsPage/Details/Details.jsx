@@ -18,7 +18,7 @@ const Details = () => {
   }, [dispatch, id]);
 
   return (
-    <div className={clsx('container', css.catalogContainer)}>
+    <div className={clsx('container', css.detailsContainer)}>
       <MainInfo />
       <CamperGallery />
       <CamperDescription />
