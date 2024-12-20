@@ -3,7 +3,7 @@ import css from './VehicleDetails.module.css';
 
 const VehicleDetails = ({ camper }) => {
   return (
-    <div>
+    <div className={css.vehicleDetailsWrapper}>
       <h2 className={css.vehicleDetailsTitle}>Vehicle details</h2>
       <div className={css.detailsTextWrapper}>
         <div className={css.vehicleDetailsTextWrapper}>

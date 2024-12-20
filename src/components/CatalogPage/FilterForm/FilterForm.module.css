@@ -1,0 +1,55 @@
+/* VehicleForm.css */
+
+/* Form container */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Location input */
+.location-container {
+  margin-bottom: 20px;
+}
+
+.locationInput {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Checkbox container */
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.filtersTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  margin-bottom: 32px;
+}
+
+/* Submit button */
+.submitButton {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

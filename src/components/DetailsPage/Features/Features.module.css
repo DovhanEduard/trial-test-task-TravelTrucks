@@ -1,5 +1,9 @@
 .features {
-  width: 631px;
+  display: flex;
+  gap: 40px;
+}
+.wrapper {
   padding: 44px 52px;
   background-color: #f7f7f7;
+  border-radius: 10px;
 }

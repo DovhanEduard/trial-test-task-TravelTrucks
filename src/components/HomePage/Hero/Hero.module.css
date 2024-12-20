@@ -2,7 +2,7 @@
   margin: 0 auto;
   width: 1440px;
   height: 696px;
-  background-image: url('../../../assets/img/HomePage/hero-bac.jpg');
+  background-image: url('../../../../public/img/hero/hero-bac.jpg');
   background-repeat: no-repeat;
 }
 .heroContainer {

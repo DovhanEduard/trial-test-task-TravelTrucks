@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import css from './Catalog.module.css';
-import Location from '../Location/Location';
 import Filters from '../Filtres/Filters';
 import CatalogList from '../CatalogList/CatalogList';
 import { useDispatch } from 'react-redux';
@@ -17,7 +16,6 @@ const Catalog = () => {
     <section>
       <div className={clsx('container', css.catalogContainer)}>
         <div className={css.sidebar}>
-          <Location />
           <Filters />
         </div>
         <div>
