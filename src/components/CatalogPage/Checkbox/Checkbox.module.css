@@ -1,4 +1,4 @@
-.custom-checkbox {
+.customCheckbox {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -6,15 +6,14 @@
   width: 100px;
   height: 100px;
   margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
   cursor: pointer;
   text-align: center;
   background-color: #fff;
   transition: all 0.3s ease;
 }
 
-.custom-checkbox.checked {
-  border: 2px solid red;
-  background-color: #ffe6e6;
+.checked {
+  border: 1px solid red;
 }

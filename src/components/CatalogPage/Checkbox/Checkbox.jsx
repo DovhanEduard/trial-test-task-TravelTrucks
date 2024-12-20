@@ -7,26 +7,9 @@ const Checkbox = ({ iconName, label, ...props }) => {
     <Field name={props.name} type="checkbox">
       {({ field, form }) => (
         <label
-          className={`custom-checkbox ${
-            form.values[props.name] ? 'checked' : ''
+          className={`${css.customCheckbox} ${
+            form.values[props.name] ? css.checked : ''
           }`}
-          style={{
-            display: 'inline-flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '100px',
-            height: '100px',
-            margin: '10px',
-            border: form.values[props.name]
-              ? '2px solid red'
-              : '1px solid #ccc',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            textAlign: 'center',
-            backgroundColor: form.values[props.name] ? '#ffe6e6' : '#fff',
-            transition: 'all 0.3s ease',
-          }}
         >
           <input
             type="checkbox"

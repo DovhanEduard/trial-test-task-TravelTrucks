@@ -29,11 +29,10 @@
 }
 
 /* Checkbox container */
-.checkbox-container {
+.checkboxContainer {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  justify-content: center;
   align-items: center;
 }
 .filtersTitle {

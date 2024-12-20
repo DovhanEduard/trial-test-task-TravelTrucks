@@ -20,7 +20,7 @@ const FilterForm = () => {
         console.log('Form Submitted', values);
       }}
     >
-      {({ values, errors, touched }) => (
+      {({ values }) => (
         <Form className="form-container">
           <div className="location-container">
             <label htmlFor="location">Location</label>
@@ -30,14 +30,11 @@ const FilterForm = () => {
               placeholder="City"
               className={css.locationInput}
             />
-            {errors.location && touched.location && (
-              <div className="error-message">{errors.location}</div>
-            )}
           </div>
           <div>
             <h2 className={css.filtersTitle}>Filters</h2>
             <h3 className="section-title">Vehicle Equipment</h3>
-            <div className="checkbox-container">
+            <div className={css.checkboxContainer}>
               <Checkbox
                 name="AC"
                 value={values.AC}
@@ -73,7 +70,7 @@ const FilterForm = () => {
 
           <div>
             <h3 className="section-title">Vehicle Type</h3>
-            <div className="checkbox-container">
+            <div className={css.checkboxContainer}>
               <Checkbox
                 name="Van"
                 value={values.Van}
