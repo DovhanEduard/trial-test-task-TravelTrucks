@@ -1,0 +1,95 @@
+.catalogListItemWrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.imageContainer {
+  width: 292px;
+  height: 312px;
+  overflow: hidden;
+}
+
+.camperImg {
+  width: 292px;
+  height: 312px;
+  border-radius: 10px;
+  object-position: center;
+  object-fit: cover; /* Зображення заповнює контейнер, зберігаючи пропорції */
+  object-position: center; /* Початкова точка обрізання - верхній лівий кут */
+}
+
+.catalogListItemTextWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.catalogListItemTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #101828;
+}
+
+.catalogListItemPrice {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #101828;
+}
+
+.textWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.starIcon {
+  stroke: #ffc531;
+  fill: #ffc531;
+}
+
+.catalogListItemText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+  margin-right: 16px;
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.catalogListItemDescription {
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 1.5;
+  color: #475467;
+
+  margin-bottom: 24px;
+
+  width: 520px; /* Ширина контейнера */
+  white-space: nowrap; /* Заборонити перенесення тексту на новий рядок */
+  overflow: hidden; /* Приховати текст, що виходить за межі контейнера */
+  text-overflow: ellipsis; /* Додати три точки в кінці тексту */
+}
+
+.viewNowLink {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  padding: 16px 40px;
+  background-color: #e44848;
+  border-radius: 200px;
+}
+
+.viewNowLink:hover,
+.viewNowLink:focus {
+  background-color: #d84343;
+}

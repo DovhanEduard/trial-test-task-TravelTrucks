@@ -1,19 +1,26 @@
-import { useEffect, lazy, Suspense } from 'react';
-import { Toaster } from 'react-hot-toast';
-import { Route, Routes } from 'react-router-dom';
-import RestrictedRoute from 'components/RestrictedRoute/RestrictedRoute';
-import SharedLayout from 'components/SharedLayout/SharedLayout.jsx';
-import PrivateRoute from 'components/PrivateRoute/PrivateRoute';
-
-const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
-const SignInPage = lazy(() => import('./pages/SignInPage/SignInPage'));
-const SignUpPage = lazy(() => import('./pages/SignUpPage/SignUpPage'));
-const TrackerPage = lazy(() => import('./pages/TrackerPage/TrackerPage'));
+import { Route, Routes } from 'react-router';
+import HomePage from './pages/HomePage';
+import CatalogPage from './pages/CatalogPage';
+import DetailsPage from './pages/DetailsPage';
+import Layout from 'components/Common/Layout/Layout';
+import Features from 'components/DetailsPage/Features/Features';
+import Reviews from 'components/DetailsPage/Reviews/Reviews';
 
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:id" element={<DetailsPage />} />
+
+          <Route path="/catalog/:id" element={<DetailsPage />}>
+            <Route path="features" element={<Features />} />
+            <Route path="reviews" element={<Reviews />} />
+          </Route>
+        </Routes>
+      </Layout>
     </>
   );
 }

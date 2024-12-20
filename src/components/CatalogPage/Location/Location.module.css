@@ -1,0 +1,30 @@
+.locationWrapper {
+  margin-bottom: 40px;
+}
+
+.locationText {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+  margin-bottom: 8px;
+}
+
+.locationInput {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+  border-radius: 12px;
+  padding: 18px 218px 18px 20px;
+  width: 360px;
+  height: 56px;
+  background-color: #f7f7f7;
+}
+
+.locationInput::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+}

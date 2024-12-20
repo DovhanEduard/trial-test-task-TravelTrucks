@@ -1,0 +1,19 @@
+.gallery {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 28px;
+}
+
+.imageContainer {
+  width: 292px;
+  height: 312px;
+  overflow: hidden;
+}
+.camperImg {
+  border-radius: 10px;
+  width: 292px;
+  height: 312px;
+  object-position: center;
+  object-fit: cover; /* Зображення заповнює контейнер, зберігаючи пропорції */
+  object-position: center; /* Початкова точка обрізання - верхній лівий кут */
+}

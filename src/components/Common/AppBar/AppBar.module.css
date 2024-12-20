@@ -1,0 +1,21 @@
+.header {
+  background-color: #f7f7f7;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  font-weight: 700;
+  font-size: 18px;
+  color: #101828;
+}
+
+.accentColor {
+  color: #6c717b;
+}

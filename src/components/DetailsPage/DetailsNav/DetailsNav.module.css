@@ -1,0 +1,14 @@
+.DetailsNav {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid #dadde1;
+  margin-bottom: 44px;
+}
+
+.navDetails {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  padding-bottom: 24px;
+}

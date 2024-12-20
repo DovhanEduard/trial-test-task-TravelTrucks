@@ -1,0 +1,26 @@
+.vehicleDetailsTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #dadde1;
+  margin-bottom: 24px;
+}
+.detailsTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.vehicleDetailsTextWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vehicleDetailsText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #101828;
+}

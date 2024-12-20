@@ -1,0 +1,8 @@
+.catalogListItem {
+  width: 888px;
+  min-height: 368px;
+  border: 1px solid #dadde1;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 32px;
+}

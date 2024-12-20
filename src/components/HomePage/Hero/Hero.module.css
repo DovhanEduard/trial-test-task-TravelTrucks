@@ -1,0 +1,42 @@
+.heroSection {
+  margin: 0 auto;
+  width: 1440px;
+  height: 696px;
+  background-image: url('../../../assets/img/HomePage/hero-bac.jpg');
+  background-repeat: no-repeat;
+}
+.heroContainer {
+  padding: 260px 0 0 64px;
+}
+
+.heroTitle {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.66667;
+  color: #f7f7f7;
+  margin-bottom: 16px;
+}
+
+.heroText {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #f7f7f7;
+  margin-bottom: 40px;
+}
+
+.viewNowLink {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  padding: 16px 48px;
+  background-color: #e44848;
+  border-radius: 200px;
+}
+
+.viewNowLink:hover,
+.viewNowLink:focus {
+  background-color: #d84343;
+}
