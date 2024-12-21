@@ -17,7 +17,7 @@ const MainInfo = () => {
               styleClass={css.starIcon}
               customWidth="16"
               customHeight="16"
-              iconName="icon-star"
+              iconName="star"
               ariaLabel="Star icon"
             />
             <p className={css.ditailsText}>
