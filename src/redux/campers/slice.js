@@ -32,6 +32,7 @@ export const campersSlice = createSlice({
       .addCase(getFilteredCampers.pending, state => {
         state.filters = {};
         state.campers = [];
+        state.totalCampers = 0;
         state.isLoading = true;
       })
       .addCase(getFilteredCampers.fulfilled, (state, action) => {

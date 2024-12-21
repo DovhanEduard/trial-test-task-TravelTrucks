@@ -56,15 +56,17 @@ const Catalog = () => {
         <div className={css.listWrapper}>
           <CatalogList />
           {isLoading && <Loader />}
-          <button
-            className={clsx(css.loadMoreBtn, {
-              ['visually-hidden']: isLastPage,
-            })}
-            type="button"
-            onClick={handleClick}
-          >
-            Load More
-          </button>
+          {totalCampers > 0 && (
+            <button
+              className={clsx(css.loadMoreBtn, {
+                ['visually-hidden']: isLastPage,
+              })}
+              type="button"
+              onClick={handleClick}
+            >
+              Load More
+            </button>
+          )}
         </div>
       </div>
     </section>

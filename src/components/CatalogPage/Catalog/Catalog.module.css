@@ -35,7 +35,6 @@
   height: 56px;
 }
 
-.loadMoreBtn:focus,
 .loadMoreBtn:hover {
   border-color: #d84343;
 }
