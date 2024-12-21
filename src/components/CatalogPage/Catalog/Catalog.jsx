@@ -54,7 +54,11 @@ const Catalog = () => {
           <Filters setDefaultState={setDefaultState} />
         </div>
         <div className={css.listWrapper}>
-          <CatalogList />
+          {totalCampers === 0 ? (
+            <p className={css.noMatchesText}>No matches found!</p>
+          ) : (
+            <CatalogList />
+          )}
           {isLoading && <Loader />}
           {totalCampers > 0 && (
             <button
