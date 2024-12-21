@@ -1,20 +1,28 @@
-/* VehicleForm.css */
-
-/* Form container */
 .form-container {
   max-width: 400px;
   margin: 0 auto;
 }
 
-/* Location input */
-.location-container {
-  margin-bottom: 20px;
+.locationContainer {
+  margin-bottom: 40px;
 }
 
 .locationInput {
-  width: 100%;
+  width: 360px;
+  height: 56px;
   padding: 8px;
   margin-top: 5px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+}
+
+.errorMessage {
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: red;
 }
 
 .error-message {
@@ -22,13 +30,16 @@
   font-size: 12px;
 }
 
-/* Section titles */
-.section-title {
-  font-size: 18px;
-  margin-bottom: 10px;
+.sectionTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #dadde1;
 }
 
-/* Checkbox container */
 .checkboxContainer {
   display: flex;
   flex-wrap: wrap;
@@ -43,12 +54,15 @@
   margin-bottom: 32px;
 }
 
-/* Submit button */
 .submitButton {
-  background-color: red;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 166px;
+  height: 56px;
+  background-color: #e44848;
 }

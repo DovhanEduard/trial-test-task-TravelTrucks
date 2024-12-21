@@ -1,8 +1,24 @@
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Checkbox from '../Checkbox/Checkbox';
-import css from './FilterForm.module.css'; // Підключаємо CSS файл
+import css from './FilterForm.module.css';
+import * as Yup from 'yup';
 
 const FilterForm = () => {
+  const validationSchema = Yup.object({
+    location: Yup.string().matches(
+      /^[A-Za-z]+,\s[A-Za-z]+$/,
+      "Format must be 'Country, City'"
+    ),
+    AC: Yup.boolean(),
+    Automatic: Yup.boolean(),
+    Kitchen: Yup.boolean(),
+    TV: Yup.boolean(),
+    Bathroom: Yup.boolean(),
+    Van: Yup.boolean(),
+    FullyIntegrated: Yup.boolean(),
+    Alcove: Yup.boolean(),
+  });
+
   return (
     <Formik
       initialValues={{
@@ -16,13 +32,14 @@ const FilterForm = () => {
         FullyIntegrated: false,
         Alcove: false,
       }}
+      validationSchema={validationSchema}
       onSubmit={values => {
         console.log('Form Submitted', values);
       }}
     >
       {({ values }) => (
         <Form className="form-container">
-          <div className="location-container">
+          <div className={css.locationContainer}>
             <label htmlFor="location">Location</label>
             <Field
               id="location"
@@ -30,10 +47,15 @@ const FilterForm = () => {
               placeholder="City"
               className={css.locationInput}
             />
+            <ErrorMessage
+              className={css.errorMessage}
+              name="location"
+              component="div"
+            />
           </div>
           <div>
             <h2 className={css.filtersTitle}>Filters</h2>
-            <h3 className="section-title">Vehicle Equipment</h3>
+            <h3 className={css.sectionTitle}>Vehicle Equipment</h3>
             <div className={css.checkboxContainer}>
               <Checkbox
                 name="AC"
@@ -69,7 +91,7 @@ const FilterForm = () => {
           </div>
 
           <div>
-            <h3 className="section-title">Vehicle Type</h3>
+            <h3 className={css.sectionTitle}>Vehicle Type</h3>
             <div className={css.checkboxContainer}>
               <Checkbox
                 name="Van"
