@@ -12,7 +12,7 @@ const CustomIcon = ({
       width={customWidth || '32'}
       height={customHeight || '32'}
     >
-      <use href={`../../../../public/img/icons/icons.svg#${iconName}`}></use>
+      <use href={`img/icons/icons.svg#${iconName}`}></use>
     </svg>
   );
 };
