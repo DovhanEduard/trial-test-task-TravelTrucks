@@ -9,7 +9,6 @@ export const parseFilterData = filters => {
   const filledFilterParam = Object.fromEntries(
     Object.entries(filterParams).filter(([_, value]) => value)
   );
-  console.log(filledFilterParam);
 
   return filledFilterParam;
 };
