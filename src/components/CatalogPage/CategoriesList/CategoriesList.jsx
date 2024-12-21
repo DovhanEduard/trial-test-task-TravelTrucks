@@ -1,14 +1,12 @@
 import CustomIcon from 'components/Common/CustomIcon/CustomIcon';
 import css from './CategoriesList.module.css';
-import { BsFuelPumpDiesel } from 'react-icons/bs';
-import { MdOutlineRadio } from 'react-icons/md';
 
 const CategoriesList = ({ camper }) => {
   return (
     <ul className={css.categoriesList}>
       <li className={css.listItem}>
         <CustomIcon
-          iconName="icon-diagram"
+          iconName="diagram"
           ariaLabel="Icon of automatic transmotion"
           customWidth="20"
           customHeight="20"
@@ -18,7 +16,7 @@ const CategoriesList = ({ camper }) => {
       {camper.AC && (
         <li className={css.listItem}>
           <CustomIcon
-            iconName="icon-wind"
+            iconName="wind"
             ariaLabel="Icon of wind"
             customWidth="20"
             customHeight="20"
@@ -30,7 +28,7 @@ const CategoriesList = ({ camper }) => {
       {camper.kitchen && (
         <li className={css.listItem}>
           <CustomIcon
-            iconName="icon-cup-hot"
+            iconName="hotCup"
             ariaLabel="Icon of Kitchen"
             customWidth="20"
             customHeight="20"
@@ -41,21 +39,31 @@ const CategoriesList = ({ camper }) => {
 
       {camper.radio && (
         <li className={css.listItem}>
-          <MdOutlineRadio />
+          <CustomIcon
+            iconName="radio"
+            ariaLabel="Icon of Kitchen"
+            customWidth="20"
+            customHeight="20"
+          />
           <p className={css.listItemText}>Radio</p>
         </li>
       )}
 
       {camper.engine === 'petrol' && (
         <li className={css.listItem}>
-          <BsFuelPumpDiesel />
+          <CustomIcon
+            iconName="petrol"
+            ariaLabel="Icon of Kitchen"
+            customWidth="20"
+            customHeight="20"
+          />
           <p className={css.listItemText}>Petrol</p>
         </li>
       )}
       {camper.bathroom && (
         <li className={css.listItem}>
           <CustomIcon
-            iconName="icon-shower"
+            iconName="shower"
             ariaLabel="Icon of Bathroom"
             customWidth="20"
             customHeight="20"
@@ -66,7 +74,7 @@ const CategoriesList = ({ camper }) => {
       {camper.refrigerator && (
         <li className={css.listItem}>
           <CustomIcon
-            iconName="icon-solar_fridge-outline"
+            iconName="refrigerator"
             ariaLabel="Icon of Refrigerator"
             customWidth="20"
             customHeight="20"
@@ -78,7 +86,7 @@ const CategoriesList = ({ camper }) => {
         <li className={css.listItem}>
           <CustomIcon
             styleClass={css.categorieListIcon}
-            iconName="icon-lucide_microwave"
+            iconName="microwave"
             ariaLabel="Icon of Microwave"
             customWidth="20"
             customHeight="20"
@@ -90,7 +98,7 @@ const CategoriesList = ({ camper }) => {
         <li className={css.listItem}>
           <CustomIcon
             styleClass={css.categorieListIcon}
-            iconName="icon-hugeicons_gas-stove"
+            iconName="gas"
             ariaLabel="Icon of automatic gas"
             customWidth="20"
             customHeight="20"
@@ -102,7 +110,7 @@ const CategoriesList = ({ camper }) => {
         <li className={css.listItem}>
           <CustomIcon
             styleClass={css.categorieListIcon}
-            iconName="icon-ion_water-outline"
+            iconName="water"
             ariaLabel="Icon of Water"
             customWidth="20"
             customHeight="20"

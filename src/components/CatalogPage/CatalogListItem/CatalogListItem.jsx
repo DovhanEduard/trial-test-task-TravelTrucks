@@ -46,10 +46,10 @@ const CatalogListItem = ({ camper }) => {
               onClick={handleClick}
             >
               <CustomIcon
-                styleClass={clsx({
+                styleClass={clsx(css.heartIcon, {
                   [css.isSelected]: isSelected,
                 })}
-                iconName="icon-heart"
+                iconName="heart"
                 ariaLabel="Star icon"
                 customWidth="26"
                 customHeight="24"
@@ -60,9 +60,7 @@ const CatalogListItem = ({ camper }) => {
         <div className={css.textWrapper}>
           <CustomIcon
             styleClass={css.starIcon}
-            customWidth="16"
-            customHeight="16"
-            iconName="icon-star"
+            iconName="star"
             ariaLabel="Star icon"
           />
           <p className={css.catalogListItemText}>

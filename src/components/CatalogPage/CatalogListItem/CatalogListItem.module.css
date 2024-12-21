@@ -41,6 +41,10 @@
   background-color: transparent;
   outline: transparent;
 }
+.heartIcon {
+  width: 26px;
+  height: 24px;
+}
 .isSelected {
   fill: #e44848;
 }
@@ -52,7 +56,8 @@
 }
 
 .starIcon {
-  stroke: #ffc531;
+  width: 16px;
+  height: 16px;
   fill: #ffc531;
 }
 

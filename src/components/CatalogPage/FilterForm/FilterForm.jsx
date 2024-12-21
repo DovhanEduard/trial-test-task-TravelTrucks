@@ -67,31 +67,26 @@ const FilterForm = ({ setDefaultState }) => {
               <Checkbox
                 name="AC"
                 value={values.AC}
-                iconName="icon-wind"
+                iconName="wind"
                 label="AC"
               />
               <Checkbox
                 name="automatic"
                 value={values.automatic}
-                iconName="icon-diagram"
+                iconName="diagram"
                 label="Automatic"
               />
               <Checkbox
                 name="kitchen"
                 value={values.kitchen}
-                iconName="icon-cup-hot"
+                iconName="hotCup"
                 label="Kitchen"
               />
-              <Checkbox
-                name="TV"
-                value={values.TV}
-                iconName="icon-tv"
-                label="TV"
-              />
+              <Checkbox name="TV" value={values.TV} iconName="tv" label="TV" />
               <Checkbox
                 name="bathroom"
                 value={values.bathroom}
-                iconName="icon-shower"
+                iconName="shower"
                 label="Bathroom"
               />
             </div>
@@ -103,19 +98,19 @@ const FilterForm = ({ setDefaultState }) => {
               <Checkbox
                 name="van"
                 value={values.van}
-                iconName="icon-bi_grid-1x2"
+                iconName="grid1X2"
                 label="Van"
               />
               <Checkbox
                 name="fullyIntegrated"
                 value={values.fullyIntegrated}
-                iconName="icon-bi_grid"
+                iconName="grid2X2"
                 label="Fully Integrated"
               />
               <Checkbox
                 name="alcove"
                 value={values.alcove}
-                iconName="icon-bi_grid-3x3-gap"
+                iconName="grid3X3"
                 label="Alcove"
               />
             </div>
