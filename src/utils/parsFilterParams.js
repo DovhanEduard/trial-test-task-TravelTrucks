@@ -1,33 +1,15 @@
 export const parseFilterData = filters => {
-  if (filters === 'undefined') {
-    return {};
-  }
-  const filteredObj = Object.entries(filters)
-    .filter(([key, value]) => value === true)
-    .reduce((acc, [key, value]) => {
-      acc[key] = value;
-      return acc;
-    }, {});
+  const { automatic, ...restFilters } = filters || {};
 
-  if (filters.location) {
-    filteredObj.location = filters.location;
-  }
-  if (filters.automatic) {
-    filteredObj.transmission = 'automatic';
-    delete filteredObj.automatic;
-  }
-  if (filters.van) {
-    filteredObj.form = 'panelTruck';
-    delete filteredObj.van;
-  }
-  if (filters.fullyIntegrated) {
-    filteredObj.form = 'fullyIntegrated';
-    delete filteredObj.fullyIntegrated;
-  }
-  if (filters.alcove) {
-    filteredObj.form = 'alcove';
-    delete filteredObj.alcove;
-  }
+  const filterParams = {
+    transmission: automatic && 'automatic',
+    ...restFilters,
+  };
 
-  return filteredObj;
+  const filledFilterParam = Object.fromEntries(
+    Object.entries(filterParams).filter(([_, value]) => value)
+  );
+  console.log(filledFilterParam);
+
+  return filledFilterParam;
 };

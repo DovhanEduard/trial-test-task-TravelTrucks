@@ -17,3 +17,8 @@
 .checked {
   border: 1px solid red;
 }
+
+.chechBoxIcon {
+  width: 32px;
+  height: 32px;
+}

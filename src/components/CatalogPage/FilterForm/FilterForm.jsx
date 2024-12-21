@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
 import { getFilteredCampers } from '../../../redux/campers/operations';
 import { CiMap } from 'react-icons/ci';
+import RadioButton from '../RadioBtn/RadioBtn';
 
 const FilterForm = ({ setDefaultState }) => {
   const dispatch = useDispatch();
@@ -20,6 +21,16 @@ const FilterForm = ({ setDefaultState }) => {
     fullyIntegrated: Yup.boolean(),
     alcove: Yup.boolean(),
   });
+
+  const options = [
+    { value: 'panelTruck', iconName: 'grid1X2', label: 'Van' },
+    {
+      value: 'fullyIntegrated',
+      iconName: 'grid2X2',
+      label: 'Fully Integrated',
+    },
+    { value: 'alcove', iconName: 'grid3X3', label: 'Alcove' },
+  ];
 
   return (
     <Formik
@@ -95,24 +106,7 @@ const FilterForm = ({ setDefaultState }) => {
           <div>
             <h3 className={css.sectionTitle}>Vehicle Type</h3>
             <div className={css.checkboxContainer}>
-              <Checkbox
-                name="van"
-                value={values.van}
-                iconName="grid1X2"
-                label="Van"
-              />
-              <Checkbox
-                name="fullyIntegrated"
-                value={values.fullyIntegrated}
-                iconName="grid2X2"
-                label="Fully Integrated"
-              />
-              <Checkbox
-                name="alcove"
-                value={values.alcove}
-                iconName="grid3X3"
-                label="Alcove"
-              />
+              <RadioButton name="form" options={options} />
             </div>
           </div>
 

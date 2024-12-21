@@ -19,7 +19,7 @@ const Checkbox = ({ iconName, label, ...props }) => {
             style={{ display: 'none' }}
           />
           <div style={{ fontSize: '24px', marginBottom: '8px' }}>
-            <CustomIcon iconName={iconName} />
+            <CustomIcon iconName={iconName} styleClass={css.chechBoxIcon} />
           </div>
           <span>{label}</span>
         </label>
