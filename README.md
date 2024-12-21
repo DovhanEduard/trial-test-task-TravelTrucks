@@ -19,7 +19,7 @@ Currently, two official plugins are available:
 <p align="center">*HomePage: Welcome to Travel Truck*</p>
 
 <p align="center">
-  <img src="img/travelTruckSite/catalog.png" alt="CatalogPage" />
+  <img src="public/img/travelTruckSite/catalog.png" alt="CatalogPage" />
 </p>
 <p align="center">*CatalogPage: Choose your camper*</p>
 
