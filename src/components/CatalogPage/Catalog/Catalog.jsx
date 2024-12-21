@@ -54,7 +54,8 @@ const Catalog = () => {
           <Filters setDefaultState={setDefaultState} />
         </div>
         <div className={css.listWrapper}>
-          {isLoading ? <Loader /> : <CatalogList />}
+          <CatalogList />
+          {isLoading && <Loader />}
           <button
             className={clsx(css.loadMoreBtn, {
               ['visually-hidden']: isLastPage,
