@@ -14,7 +14,7 @@ Currently, two official plugins are available:
 ### 👀 Preview of Pages
 
 <p align="center">
-  <img src="/img/homepage.png" alt="HomePage" />
+  <img src="public/img/travelTruckSite/homepage.png" alt="HomePage" />
 </p>
 <p align="center">*HomePage: Welcome to Travel Truck*</p>
 
@@ -24,16 +24,16 @@ Currently, two official plugins are available:
 <p align="center">*CatalogPage: Choose your camper*</p>
 
 <p align="center">
-  <img src="assets/img/details.png" alt="DetailsPage" />
+  <img src="public/img/travelTruckSite/details.png" alt="DetailsPage" />
 </p>
 <p align="center">*DetailsPage: See more details about camper*</p>
 
 <p align="center">
-  <img src="assets/img/features.png" alt="FeaturesPage" />
+  <img src="public/img/travelTruckSite/features.png" alt="FeaturesPage" />
 </p>
 <p align="center">*FeaturesPage: See camper features and book yours*</p>
 
 <p align="center">
-  <img src="assets/img/reviews.png" alt="ReviewsPage" />
+  <img src="public/img/travelTruckSite/reviews.png" alt="ReviewsPage" />
 </p>
 <p align="center">*ReviewsPage: See camper reviews and book yours*</p>

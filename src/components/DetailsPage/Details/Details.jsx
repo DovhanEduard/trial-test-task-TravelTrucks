@@ -28,9 +28,11 @@ const Details = () => {
         ) : (
           <>
             <div>
-              <MainInfo />
-              <CamperGallery />
-              <CamperDescription />
+              <div className={css.wrapper}>
+                <MainInfo />
+                <CamperGallery />
+                <CamperDescription />
+              </div>
               <DetailsNav />
               <Outlet />
             </div>
