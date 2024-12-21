@@ -2,21 +2,23 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Checkbox from '../Checkbox/Checkbox';
 import css from './FilterForm.module.css';
 import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
+import { getFilteredCampers } from '../../../redux/campers/operations';
+import { CiMap } from 'react-icons/ci';
 
-const FilterForm = () => {
+const FilterForm = ({ setDefaultState }) => {
+  const dispatch = useDispatch();
+
   const validationSchema = Yup.object({
-    location: Yup.string().matches(
-      /^[A-Za-z]+,\s[A-Za-z]+$/,
-      "Format must be 'Country, City'"
-    ),
+    location: Yup.string(),
     AC: Yup.boolean(),
-    Automatic: Yup.boolean(),
-    Kitchen: Yup.boolean(),
+    automatic: Yup.boolean(),
+    kitchen: Yup.boolean(),
     TV: Yup.boolean(),
-    Bathroom: Yup.boolean(),
-    Van: Yup.boolean(),
-    FullyIntegrated: Yup.boolean(),
-    Alcove: Yup.boolean(),
+    bathroom: Yup.boolean(),
+    van: Yup.boolean(),
+    fullyIntegrated: Yup.boolean(),
+    alcove: Yup.boolean(),
   });
 
   return (
@@ -24,29 +26,34 @@ const FilterForm = () => {
       initialValues={{
         location: '',
         AC: false,
-        Automatic: false,
-        Kitchen: false,
+        automatic: false,
+        kitchen: false,
         TV: false,
-        Bathroom: false,
-        Van: false,
-        FullyIntegrated: false,
-        Alcove: false,
+        bathroom: false,
+        van: false,
+        fullyIntegrated: false,
+        alcove: false,
       }}
       validationSchema={validationSchema}
       onSubmit={values => {
-        console.log('Form Submitted', values);
+        setDefaultState();
+
+        dispatch(getFilteredCampers({ fromData: values }));
       }}
     >
       {({ values }) => (
-        <Form className="form-container">
+        <Form className={css.formContainer}>
           <div className={css.locationContainer}>
             <label htmlFor="location">Location</label>
-            <Field
-              id="location"
-              name="location"
-              placeholder="City"
-              className={css.locationInput}
-            />
+            <div className={css.locationWrapper}>
+              <Field
+                id="location"
+                name="location"
+                placeholder="City"
+                className={css.locationInput}
+              />
+              <CiMap className={css.mapIcon} />
+            </div>
             <ErrorMessage
               className={css.errorMessage}
               name="location"
@@ -64,14 +71,14 @@ const FilterForm = () => {
                 label="AC"
               />
               <Checkbox
-                name="Automatic"
-                value={values.Automatic}
+                name="automatic"
+                value={values.automatic}
                 iconName="icon-diagram"
                 label="Automatic"
               />
               <Checkbox
-                name="Kitchen"
-                value={values.Kitchen}
+                name="kitchen"
+                value={values.kitchen}
                 iconName="icon-cup-hot"
                 label="Kitchen"
               />
@@ -82,8 +89,8 @@ const FilterForm = () => {
                 label="TV"
               />
               <Checkbox
-                name="Bathroom"
-                value={values.Bathroom}
+                name="bathroom"
+                value={values.bathroom}
                 iconName="icon-shower"
                 label="Bathroom"
               />
@@ -94,20 +101,20 @@ const FilterForm = () => {
             <h3 className={css.sectionTitle}>Vehicle Type</h3>
             <div className={css.checkboxContainer}>
               <Checkbox
-                name="Van"
-                value={values.Van}
+                name="van"
+                value={values.van}
                 iconName="icon-bi_grid-1x2"
                 label="Van"
               />
               <Checkbox
-                name="FullyIntegrated"
-                value={values.FullyIntegrated}
+                name="fullyIntegrated"
+                value={values.fullyIntegrated}
                 iconName="icon-bi_grid"
                 label="Fully Integrated"
               />
               <Checkbox
-                name="Alcove"
-                value={values.Alcove}
+                name="alcove"
+                value={values.alcove}
                 iconName="icon-bi_grid-3x3-gap"
                 label="Alcove"
               />

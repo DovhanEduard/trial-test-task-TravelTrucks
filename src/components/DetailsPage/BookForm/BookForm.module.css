@@ -1,3 +1,12 @@
+.toast {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 12px;
+  padding: 18px 18px 18px 18px;
+  color: #fff;
+  background-color: rgb(0, 154, 0);
+}
 .inputWrapper {
   border: 1px solid #dadde1;
   border-radius: 10px;
@@ -49,6 +58,7 @@
   background-color: #f7f7f7;
   outline: transparent;
 }
+
 .fromSubmitBtn {
   font-weight: 500;
   font-size: 16px;
@@ -62,6 +72,12 @@
   background-color: #e44848;
   margin-left: 180px;
 }
+
+.fromSubmitBtn:hover,
+.fromSubmitBtn:focus {
+  background-color: #d84343;
+}
+
 .errorMessage {
   margin-left: 15px;
   font-weight: 500;

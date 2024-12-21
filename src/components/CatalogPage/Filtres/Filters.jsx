@@ -1,10 +1,10 @@
 import FilterForm from '../FilterForm/FilterForm.jsx';
 import css from './Filters.module.css';
 
-const Filters = () => {
+const Filters = ({ setDefaultState }) => {
   return (
     <div className={css.filtersContainer}>
-      <FilterForm />
+      <FilterForm setDefaultState={setDefaultState} />
     </div>
   );
 };

@@ -1,8 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCampers, getCamperById } from './operations';
+import { getCampers, getFilteredCampers, getCamperById } from './operations';
 
 const INITIAL_STATE = {
   campers: [],
+  totalCampers: 0,
+  filters: {},
   camper: null,
   error: null,
   isLoading: false,
@@ -19,10 +21,28 @@ export const campersSlice = createSlice({
       .addCase(getCampers.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-
-        state.campers = action.payload;
+        state.totalCampers = action.payload.total;
+        state.campers = action.payload.items;
       })
       .addCase(getCampers.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+
+      .addCase(getFilteredCampers.pending, state => {
+        state.filters = {};
+        state.campers = [];
+        state.isLoading = true;
+      })
+      .addCase(getFilteredCampers.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.totalCampers = action.payload.total;
+
+        state.campers = action.payload.items;
+        state.filters = action.payload.parsedFilterParams;
+      })
+      .addCase(getFilteredCampers.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       })

@@ -1,5 +1,5 @@
-.form-container {
-  max-width: 400px;
+.formContainer {
+  max-width: 360px;
   margin: 0 auto;
 }
 
@@ -7,10 +7,22 @@
   margin-bottom: 40px;
 }
 
+.locationWrapper {
+  position: relative;
+}
+
+.mapIcon {
+  position: absolute;
+  left: 22px;
+  top: 22px;
+  width: 20px;
+  height: 20px;
+}
+
 .locationInput {
   width: 360px;
   height: 56px;
-  padding: 8px;
+  padding: 16px 48px;
   margin-top: 5px;
   background-color: #f7f7f7;
   border-radius: 12px;
@@ -65,4 +77,9 @@
   width: 166px;
   height: 56px;
   background-color: #e44848;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+  background-color: #d84343;
 }

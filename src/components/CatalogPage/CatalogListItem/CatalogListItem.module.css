@@ -37,6 +37,13 @@
   line-height: 1.33333;
   color: #101828;
 }
+.heartBtn {
+  background-color: transparent;
+  outline: transparent;
+}
+.isSelected {
+  fill: #e44848;
+}
 
 .textWrapper {
   display: flex;
@@ -47,6 +54,17 @@
 .starIcon {
   stroke: #ffc531;
   fill: #ffc531;
+}
+
+.locationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mapIcon {
+  width: 20px;
+  height: 20px;
 }
 
 .catalogListItemText {

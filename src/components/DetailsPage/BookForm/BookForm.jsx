@@ -3,6 +3,8 @@ import * as Yup from 'yup';
 import css from './BookForm.module.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import toast, { toastConfig } from 'react-simple-toasts';
+import 'react-simple-toasts/dist/style.css';
 
 const BookForm = () => {
   const validationSchema = Yup.object({
@@ -14,14 +16,19 @@ const BookForm = () => {
     comments: Yup.string(),
   });
 
+  toastConfig({
+    position: 'bottom-left',
+    className: css.toast,
+  });
+
   return (
     <div className={css.fromWrapper}>
       <Formik
         initialValues={{ name: '', email: '', date: '', comments: '' }}
         validationSchema={validationSchema}
-        onSubmit={(values, { setSubmitting }) => {
-          console.log(values);
-          setSubmitting(false);
+        onSubmit={(values, { resetForm }) => {
+          resetForm();
+          toast('✔ You successfully booked a camper!');
         }}
       >
         {({ values, setFieldValue, isSubmitting }) => (

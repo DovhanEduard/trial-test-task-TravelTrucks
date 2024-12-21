@@ -1,5 +1,7 @@
 import CustomIcon from 'components/Common/CustomIcon/CustomIcon';
 import css from './CategoriesList.module.css';
+import { BsFuelPumpDiesel } from 'react-icons/bs';
+import { MdOutlineRadio } from 'react-icons/md';
 
 const CategoriesList = ({ camper }) => {
   return (
@@ -34,6 +36,20 @@ const CategoriesList = ({ camper }) => {
             customHeight="20"
           />
           <p className={css.listItemText}>Kitchen</p>
+        </li>
+      )}
+
+      {camper.radio && (
+        <li className={css.listItem}>
+          <MdOutlineRadio />
+          <p className={css.listItemText}>Radio</p>
+        </li>
+      )}
+
+      {camper.engine === 'petrol' && (
+        <li className={css.listItem}>
+          <BsFuelPumpDiesel />
+          <p className={css.listItemText}>Petrol</p>
         </li>
       )}
       {camper.bathroom && (

@@ -1,5 +1,35 @@
+.toast {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 12px;
+  padding: 18px 18px 18px 18px;
+  color: #fff;
+  background-color: #e44848;
+}
+
 .catalogContainer {
   display: flex;
   padding-top: 48px;
   gap: 64px;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.loadMoreBtn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #101828;
+  border: 1px solid #dadde1;
+  border-radius: 200px;
+  padding: 16px 32px;
+  width: 145px;
+  height: 56px;
 }
