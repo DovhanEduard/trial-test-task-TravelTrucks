@@ -14,12 +14,12 @@ Currently, two official plugins are available:
 ### 👀 Preview of Pages
 
 <p align="center">
-  <img src="assets/img/homepage.png" alt="HomePage" />
+  <img src="/img/homepage.png" alt="HomePage" />
 </p>
 <p align="center">*HomePage: Welcome to Travel Truck*</p>
 
 <p align="center">
-  <img src="assets/catalog.png" alt="CatalogPage" />
+  <img src="img/travelTruckSite/catalog.png" alt="CatalogPage" />
 </p>
 <p align="center">*CatalogPage: Choose your camper*</p>
 
