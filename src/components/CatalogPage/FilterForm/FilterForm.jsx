@@ -105,7 +105,7 @@ const FilterForm = ({ setDefaultState }) => {
 
           <div>
             <h3 className={css.sectionTitle}>Vehicle Type</h3>
-            <div className={css.checkboxContainer}>
+            <div className={css.radioBtnContainer}>
               <RadioButton name="form" options={options} />
             </div>
           </div>

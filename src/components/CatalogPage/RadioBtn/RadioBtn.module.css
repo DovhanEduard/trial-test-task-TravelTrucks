@@ -1,7 +1,8 @@
 .radioButtonGroup {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
+  margin-bottom: 44px;
 }
 
 .radioButton {
@@ -19,7 +20,7 @@
 
 .truckType {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.5;
   letter-spacing: -0.01em;
   color: #101828;
