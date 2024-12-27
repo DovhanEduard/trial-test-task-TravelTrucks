@@ -23,11 +23,11 @@ const Catalog = () => {
   const isLoading = useSelector(selectCampersIsLoading);
 
   useEffect(() => {
-    dispatch(getCampers({ limit: limitPerPage }));
-  }, [dispatch, limitPerPage]);
+    dispatch(getCampers({ page: currentPage }));
+  }, [dispatch]);
 
   const setDefaultState = () => {
-    setlimitPerPage(4);
+    setCurrentPage(1);
     setisLastPage(false);
   };
 
@@ -37,14 +37,17 @@ const Catalog = () => {
   });
 
   const handleClick = () => {
-    const limit = limitPerPage + 4;
+    const page = currentPage + 1;
 
-    setlimitPerPage(limit);
+    setCurrentPage(page);
 
     if (currentPage * limitPerPage > totalCampers) {
       toast('No more campers!');
       setisLastPage(true);
+      return;
     }
+
+    dispatch(getCampers({ page: page }));
   };
 
   return (
@@ -60,7 +63,7 @@ const Catalog = () => {
             <CatalogList />
           )}
           {isLoading && <Loader />}
-          {totalCampers > 0 && (
+          {totalCampers > limitPerPage && (
             <button
               className={clsx(css.loadMoreBtn, {
                 ['visually-hidden']: isLastPage,

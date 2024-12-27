@@ -22,7 +22,7 @@ export const campersSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.totalCampers = action.payload.total;
-        state.campers = action.payload.items;
+        state.campers = [...state.campers, ...action.payload.items];
       })
       .addCase(getCampers.rejected, (state, action) => {
         state.isLoading = false;

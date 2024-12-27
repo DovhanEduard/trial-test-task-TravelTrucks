@@ -12,6 +12,10 @@ export const getCampers = createAsyncThunk(
     try {
       const state = thunkAPI.getState();
       const filters = state.campers.filters;
+      // const parsedFiltersFormData = parseFilterData(filtersFormData);
+      // console.log('filters', filters);
+      // console.log('filtersFormData', parsedFiltersFormData);
+      console.log(filters);
 
       const { data } = await instance.get(
         `/campers?limit=${limit}&page=${page}`,
@@ -37,9 +41,9 @@ export const getCampers = createAsyncThunk(
 
 export const getFilteredCampers = createAsyncThunk(
   'campers/getFilteredCampers',
-  async ({ page = 1, limit = 4, fromData = {} }, thunkAPI) => {
+  async ({ page = 1, limit = 4, filtersFormData = {} }, thunkAPI) => {
     try {
-      const parsedFilterParams = parseFilterData(fromData);
+      const parsedFilterParams = parseFilterData(filtersFormData);
 
       const { data } = await instance.get(
         `/campers?limit=${limit}&page=${page}`,

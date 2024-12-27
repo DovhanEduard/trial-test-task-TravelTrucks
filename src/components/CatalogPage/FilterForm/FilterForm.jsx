@@ -48,8 +48,7 @@ const FilterForm = ({ setDefaultState }) => {
       validationSchema={validationSchema}
       onSubmit={values => {
         setDefaultState();
-
-        dispatch(getFilteredCampers({ fromData: values }));
+        dispatch(getFilteredCampers({ filtersFormData: values }));
       }}
     >
       {({ values }) => (
